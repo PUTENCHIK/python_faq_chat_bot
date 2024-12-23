@@ -1,0 +1,5 @@
+numpy
+tensorflow
+tensorflow_hub
+tensorflow_text
+tf_models_official
