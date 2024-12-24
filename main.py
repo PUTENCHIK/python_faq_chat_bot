@@ -46,6 +46,5 @@ if __name__ == "__main__":
                 p += [model.predict(np.expand_dims(qa_emb, axis=0), verbose=None)[0, 0]]
 
             p = np.array(p)
-            # print(p)
             answer_index = np.argmax(p)
             print("[Out]: ", answers[answer_index], end="\n\n")

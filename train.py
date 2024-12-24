@@ -67,10 +67,8 @@ model = tf.keras.models.Sequential()
 inp_shape = X.shape[-1]
 
 model.add(tf.keras.layers.InputLayer(input_shape=(inp_shape,)))
-# model.add(tf.keras.layers.Dense(inp_shape // 2, activation='selu'))
-# model.add(tf.keras.layers.Dense(inp_shape // 4, activation='selu'))
-# model.add(tf.keras.layers.Dense(inp_shape // 8, activation='selu'))
 model.add(tf.keras.layers.Dense(200, activation='selu'))
+model.add(tf.keras.layers.Dense(100, activation='selu'))
 model.add(tf.keras.layers.Dense(1, activation='sigmoid'))
 
 es = tf.keras.callbacks.EarlyStopping(monitor='auc',
@@ -85,10 +83,9 @@ model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=1e-3),
 model.summary()
 
 model.fit(X, y,
-          epochs=1,
-          # class_weight={0: 1, 1: len(dataset)}
+          epochs=1000,
 )
 
 path = pathlib.Path(__file__).parent / "data"
-np.save(path / "data.npy", data)
+np.save(path / "data_local.npy", data)
 model.save(path / "model_local.keras")

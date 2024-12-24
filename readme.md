@@ -16,4 +16,21 @@
 
 ## Описание
 
-## Примеры
+Реализация является консольным приложением. Код, использовавшийся для обучения модели, 
+можно найти в [colab](https://colab.research.google.com/drive/1rG7P5ixspHH7Pf_mRPTwiABh6zymZlA_?usp=sharing).
+
+Установление зависимостей:
+
+```bash
+pip3 install -r requirements.txt
+```
+
+Запуск бота:
+
+```python
+python3 main.py
+```
+
+## Демонстрация
+
+![](images/demonstrate1.png)
