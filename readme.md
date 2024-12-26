@@ -17,18 +17,23 @@
 ## Описание
 
 Реализация является консольным приложением. Код, использовавшийся для обучения модели, 
-можно найти в [colab](https://colab.research.google.com/drive/1rG7P5ixspHH7Pf_mRPTwiABh6zymZlA_?usp=sharing).
+можно найти в [colab](https://colab.research.google.com/drive/1OTwm7qTy3261u85v-R5s_hMOz2w6-fKg?usp=sharing).
 
 Установление зависимостей:
 
 ```bash
-pip3 install -r requirements.txt
+pip install -r requirements.txt
+```
+
+Сохранение языковой модели для локального использования:
+```bash
+python setup.py
 ```
 
 Запуск бота:
 
 ```python
-python3 main.py
+python main.py
 ```
 
 ## Демонстрация
