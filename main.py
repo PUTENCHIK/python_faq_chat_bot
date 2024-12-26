@@ -16,7 +16,7 @@ _, _, answers = load_dataset()
 answer_emb = bert_model.encode(answers)
 model = tf.keras.models.load_model(data_dir / "model.keras")
 
-print("Добро пожаловать, я могу ответить на ваши вопросы вопросы из жизни университета/факультета/кафедры. Напишите свой вопрос:")
+print("Вводите вопросы об университете. При вводе [exit] программа закончится.")
 while True:
     question = input("[In]: ").strip().lower()
 
